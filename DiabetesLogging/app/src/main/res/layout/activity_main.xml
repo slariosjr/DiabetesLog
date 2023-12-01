@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbgandroid"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.1"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp"/>
+        <ImageView
+            android:id="@+id/LoginImg"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/diabetesandroidlogo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DiabetesLogger"
+                android:layout_below="@id/LoginImg"
+                android:gravity="center"
+                android:text="Diabetes Logger"
+                android:fontFamily="sans-serif-condensed-light"
+                android:padding="50dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="35dp"
+                />
+
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           app:cardCornerRadius="28dp"
+           android:layout_marginBottom="-20dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="28dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Welcome"
+                   android:textSize="24sp"
+                   android:textStyle="bold"
+                   android:fontFamily="sans-serif-light"/>
+               <View
+                   android:layout_width="wrap_content"
+                   android:layout_height="30dp"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="Username"
+                   android:textColor="@color/black"
+                   android:textStyle="bold"
+                   android:alpha="0.8"
+                   />
+               <EditText
+                   android:id="@+id/username"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="text"
+                   android:drawableLeft="@drawable/baseline_person_24"
+                   />
+               <View
+                   android:layout_width="wrap_content"
+                   android:layout_height="20dp"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="Password"
+                   android:textColor="@color/black"
+                   android:textStyle="bold"
+                   android:alpha="0.8"
+                   />
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="textPassword"
+                   android:id="@+id/password"
+                   android:drawableLeft="@drawable/baseline_password_24"
+                   />
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:id="@+id/register"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:linksClickable="true"
+                           android:text="Don't have an account? Sign Up"
+                           android:textColor="@color/black"
+                           android:textSize="10dp"
+                           android:layout_alignParentEnd="true"
+                           android:layout_centerVertical="true"
+                           />
+                   </RelativeLayout>
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"/>
+
+
+               <com.google.android.material.button.MaterialButton
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp"
+                   android:id = "@+id/loginbtn"
+                   app:cornerRadius="32dp"
+                   android:text="Login"
+                   android:textColor="@color/black"
+                   android:backgroundTint="@color/cardview_light_background"
+                   android:layout_centerHorizontal="true"
+                   android:layout_margin="15dp"
+
+                   />
+               <View
+                   android:layout_width="wrap_content"
+                   android:layout_height="10dp"/>
+
+
+           </LinearLayout>
+
+
+       </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

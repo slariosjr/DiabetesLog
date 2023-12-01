@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbgandroid"
+    tools:context=".UserLogin">
+
+    <TextView
+        android:id="@+id/UserPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:padding="50dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/UserLogBtn"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserPage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Logs"></Button>
+
+
+
+    <Button
+        android:id="@+id/UserCarbsBtn"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserLogBtn"
+        android:layout_centerHorizontal="true"
+        android:text="Carb Counter"
+        android:layout_margin="15dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/UserAppointmentBtn"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserCarbsBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Appointments"
+        android:textSize="11sp"></Button>
+
+    <Button
+        android:id="@+id/UserNewsBtn"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:text="News"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/UserAppointmentBtn"
+        android:layout_margin="15dp">
+    </Button>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/UserLogoutBtn"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="754dp"
+        >
+
+    </com.google.android.material.button.MaterialButton>
+
+
+
+
+</RelativeLayout>
