@@ -50,23 +50,18 @@
         android:id="@+id/AddCarbs"
         />
 
+
     <Button
-        android:id="@+id/AdminAddUser"
+        android:id="@+id/AdminRemoveUser"
         android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/AddCarbs"
         android:layout_centerHorizontal="true"
-        android:text="Add User"
-        android:layout_margin="15dp"
-        />
-    <Button
-        android:layout_width="129dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/AdminRemoveUser"
-        android:layout_below="@id/AdminAddUser"
-        android:text="Remove User"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="15dp"/>
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Remove User" />
 
 
     <com.google.android.material.button.MaterialButton

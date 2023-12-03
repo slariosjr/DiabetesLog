@@ -12,6 +12,7 @@ import com.google.android.material.button.MaterialButton;
 
 public class AdminLogin extends AppCompatActivity {
 Button AddCarbs;
+Button RemoveUser;
 Button AdminMainLogBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ Button AdminMainLogBtn;
         MaterialButton AddNews = (MaterialButton) findViewById(R.id.AddNews);
         MaterialButton AdminMainBackBtn1 = (MaterialButton) findViewById(R.id.AdminMainBackBtn1);
         AddCarbs = findViewById(R.id.AddCarbs);
-
+        RemoveUser = findViewById(R.id.AdminRemoveUser);
 
 
 
@@ -51,6 +52,13 @@ Button AdminMainLogBtn;
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), AddCarbs.class);
+                startActivity(intent);
+            }
+        });
+        RemoveUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RemoveUser.class);
                 startActivity(intent);
             }
         });

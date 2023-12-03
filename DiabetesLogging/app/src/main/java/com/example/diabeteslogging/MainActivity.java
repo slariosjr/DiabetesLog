@@ -3,6 +3,7 @@ package com.example.diabeteslogging;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,6 +18,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.diabeteslogging.DB.Database;
+import com.example.diabeteslogging.DB.User;
+import com.example.diabeteslogging.DB.UserDao;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -24,29 +28,37 @@ import com.google.android.material.tabs.TabLayout;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-
+    private UserDao userDao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView username = findViewById(R.id.username);
-        TextView password = findViewById(R.id.password);
+        getDatabase();
+
         MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
 
-
+        TextView username = (TextView) findViewById(R.id.username);
+        TextView password = (TextView) findViewById(R.id.password);
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin") ){
-                    Toast.makeText(MainActivity.this,"Login Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(),MainAdminLogin.class);
+                User userPassword = userDao.getPasswordByID(password.getText().toString());
+                User userUsername = userDao.getUsernameByID(username.getText().toString());
+                if (username.getText().toString().equals("admin1") && password.getText().toString().equals("admin1")) {
+                    Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, UserLogin.class);
+                    UserLogin.username = username.getText().toString();
+                    UserLogin.isAdmin = true;
                     startActivity(intent);
-                } else if(username.getText().toString().equals("testuser1") && password.getText().toString().equals("testuser1")) {
-                    Toast.makeText(MainActivity.this,"Login Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(),UserLogin.class);
+                   // finish();
+                } else if (userUsername != null && userPassword != null) {
+                    Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, UserLogin.class);
+                    UserLogin.username = username.getText().toString();
+                    UserLogin.isAdmin = false;
                     startActivity(intent);
                 } else {
-                    Toast.makeText(MainActivity.this,"Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Login Failed!!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -74,5 +86,9 @@ public class MainActivity extends AppCompatActivity {
         rTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
 
+    }
+    private void getDatabase(){
+        userDao = Room.databaseBuilder(this, Database.class,Database.DATABASE_NAME).allowMainThreadQueries()
+                .fallbackToDestructiveMigration().build().UserDao();
     }
 }
