@@ -28,6 +28,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/material_dynamic_neutral60"
         android:text="Logs"></Button>
 
 
@@ -41,6 +42,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/material_dynamic_neutral60"
         android:text="Carb Counter">
 
     </Button>
@@ -56,17 +58,21 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:text="Appointments"
+        android:backgroundTint="@color/material_dynamic_neutral60"
         android:textSize="11sp"></Button>
 
     <Button
         android:id="@+id/UserNewsBtn"
         android:layout_width="124dp"
         android:layout_height="wrap_content"
-        android:text="News"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/UserAppointmentBtn"
-        android:layout_margin="15dp">
-    </Button>
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/material_dynamic_neutral60"
+        android:layout_marginBottom="15dp"
+        android:text="News"></Button>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/UserLogoutBtn"
@@ -74,19 +80,26 @@
         android:layout_height="wrap_content"
         android:text="Logout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="645dp"
+        android:backgroundTint="@color/material_dynamic_neutral60"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
         >
 
     </com.google.android.material.button.MaterialButton>
+
     <Button
+        android:id="@+id/AdminOptionsBtnLandingPage"
         android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/UserNewsBtn"
         android:layout_centerHorizontal="true"
-        android:text="Admin Options"
-        android:layout_margin="15dp"
-        android:id="@+id/AdminOptionsBtnLandingPage"
-        />
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/material_dynamic_neutral60"
+        android:text="Admin Options" />
 
 
 

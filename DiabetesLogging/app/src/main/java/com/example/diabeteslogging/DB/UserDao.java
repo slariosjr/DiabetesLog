@@ -8,6 +8,8 @@ import androidx.room.Update;
 
 import com.example.diabeteslogging.LogD;
 
+import java.util.List;
+
 @Dao
 public interface UserDao {
     @Insert
@@ -28,6 +30,8 @@ public interface UserDao {
     @Query(" SELECT * FROM " + Database.USER_TABLE + " WHERE isAdmin = :isAdmin ")
     User getisAdminByID(boolean isAdmin);
 
+    @Query("SELECT * FROM " + Database.USER_TABLE + " ORDER BY username asc")
+    List<User> getUsers();
 
 
 

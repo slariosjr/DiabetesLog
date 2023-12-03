@@ -19,41 +19,39 @@
         android:textSize="35dp" />
 
 
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/AddNews"
         android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/admin"
+        android:backgroundTint="@color/material_dynamic_neutral60"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_margin="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:text="Add News" />
 
     <Button
+        android:id="@+id/AddCarbs"
         android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/AddNews"
         android:layout_centerHorizontal="true"
-        android:layout_margin="15dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Add Carbs"
-
-        android:id="@+id/AddCarbs"
-        />
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/material_dynamic_neutral60"
+        android:text="Add Carbs" />
 
 
     <Button
         android:id="@+id/AdminRemoveUser"
         android:layout_width="129dp"
+        android:backgroundTint="@color/material_dynamic_neutral60"
         android:layout_height="wrap_content"
         android:layout_below="@id/AddCarbs"
         android:layout_centerHorizontal="true"
@@ -72,6 +70,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:text="Logout"
+        android:backgroundTint="@color/material_dynamic_neutral60"
         android:textColor="@color/white"
         />
     <com.google.android.material.button.MaterialButton
@@ -80,6 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
+        android:backgroundTint="@color/material_dynamic_neutral60"
         android:drawableEnd="@drawable/baseline_arrow_back_ios_24"
         />
 

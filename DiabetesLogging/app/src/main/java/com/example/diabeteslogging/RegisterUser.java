@@ -20,6 +20,7 @@ public class RegisterUser extends AppCompatActivity {
     EditText usernameSignUp;
     EditText passwordSignUp;
     Button SignUpBtn;
+    Button SignUpBackBtn;
 
 
     @Override
@@ -27,6 +28,7 @@ public class RegisterUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_user);
         getDatabase();
+        SignUpBackBtn = findViewById(R.id.SignUpBackBtn);
 
         usernameSignUp = findViewById(R.id.UserNameSignUp);
         passwordSignUp = findViewById(R.id.PasswordSignUp);
@@ -47,7 +49,12 @@ public class RegisterUser extends AppCompatActivity {
                 }
             }
         });
-
+    SignUpBackBtn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            onBackPressed();
+        }
+    });
 
 
 
