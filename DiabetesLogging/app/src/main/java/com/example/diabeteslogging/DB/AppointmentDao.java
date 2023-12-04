@@ -1,5 +1,7 @@
 package com.example.diabeteslogging.DB;
 
+import android.widget.EditText;
+
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;

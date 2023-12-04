@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 import com.example.diabeteslogging.DB.Database;
@@ -19,6 +20,7 @@ public class UserLogin extends AppCompatActivity {
     Button UserLogBtn;
     Button UserAppointmentBtn;
     Button AdminOptionsBtn;
+    Button UserNewsBtn;
     public static String username;
     public static boolean isAdmin;
     private UserDao userDao;
@@ -27,6 +29,8 @@ public class UserLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
         getDatabase();
+        TextView userName = (TextView) findViewById(R.id.UserPage);
+        userName.setText("Welcome " + username);
         MaterialButton UserLogoutBtn = (MaterialButton) findViewById(R.id.UserLogoutBtn);
         UserLogBtn = findViewById(R.id.UserLogBtn);
         UserAppointmentBtn = findViewById(R.id.UserAppointmentBtn);
@@ -68,6 +72,15 @@ public class UserLogin extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+            }
+        });
+        UserNewsBtn = findViewById(R.id.UserNewsBtn);
+        UserNewsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserLogin.this, DiabetesNewsDetails.class);
+                startActivity(intent);
+                finish();
             }
         });
 

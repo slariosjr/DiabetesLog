@@ -15,7 +15,10 @@
         android:textSize="32sp"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        android:padding="50dp">
+        android:padding="50dp"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif-thin"
+        >
     </TextView>
 
     <Button

@@ -8,6 +8,8 @@ import androidx.room.Update;
 
 import com.example.diabeteslogging.News;
 
+import java.util.List;
+
 @Dao
 public interface NewsDao {
 
@@ -19,12 +21,18 @@ public interface NewsDao {
     void delete(News...News);
 
     @Query("SELECT * FROM " + Database.NEWS_TABLE + " WHERE newsID = :newsID ")
-    News getNewsID(int newsID);
+    News getNewsIDByID(int newsID);
+
 
     @Query("SELECT * FROM " + Database.NEWS_TABLE + " WHERE TopicTitle = :TopicTitle")
     News getTopicByTopic(String TopicTitle);
 
+    @Query("SELECT * FROM " + Database.NEWS_TABLE + " WHERE NewsSummary = :NewsSummary")
+    News getNewsSummaryByID(String NewsSummary);
 
+
+    @Query("SELECT * FROM " + Database.NEWS_TABLE + " ORDER BY TopicTitle desc")
+    List<News> getTopicTitleList();
 
 
 

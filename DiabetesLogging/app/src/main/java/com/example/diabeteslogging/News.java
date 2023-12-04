@@ -14,12 +14,11 @@ public class News  {
     private int newsID;
     private String TopicTitle;
     private String NewsSummary;
-    private String NewsLink;
 
-    public News(String TopicTitle, String NewsSummary, String NewsLink){
+
+    public News(String TopicTitle, String NewsSummary){
         this.TopicTitle = TopicTitle;
         this.NewsSummary = NewsSummary;
-        this.NewsLink = NewsLink;
     }
 
     @Override
@@ -28,7 +27,6 @@ public class News  {
                 "newsID=" + newsID +
                 ", TopicTitle='" + TopicTitle + '\'' +
                 ", NewsSummary='" + NewsSummary + '\'' +
-                ", NewsLink='" + NewsLink + '\'' +
                 '}';
     }
 
@@ -56,11 +54,5 @@ public class News  {
         NewsSummary = newsSummary;
     }
 
-    public String getNewsLink() {
-        return NewsLink;
-    }
 
-    public void setNewsLink(String newsLink) {
-        NewsLink = newsLink;
-    }
 }
