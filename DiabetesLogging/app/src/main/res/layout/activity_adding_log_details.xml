@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/AdminAddNewsBackBtn"
+        android:id="@+id/AddLogBackBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -18,7 +18,7 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/EditNewsTextView"
+        android:id="@+id/EditLogTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -26,57 +26,90 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:text="Edit News"
+        android:text="Add Logs"
         android:textColor="@color/white"
         android:textSize="35dp"
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/EditNewsTitleEditText"
+        android:id="@+id/EditLogDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/EditNewsTextView"
+        android:layout_below="@id/EditLogTextView"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#30ffffff"
         android:drawablePadding="20dp"
-        android:hint="News Topic"
+        android:hint="Date"
         android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
 
     <EditText
-        android:id="@+id/EditNewsSummary"
-        android:layout_width="392dp"
-        android:layout_height="246dp"
-        android:layout_below="@id/EditNewsTitleEditText"
+        android:id="@+id/EditLogBloodSugar"
+        android:layout_width="388dp"
+        android:layout_height="76dp"
+        android:layout_below="@id/EditLogDate"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#30ffffff"
         android:drawablePadding="20dp"
-        android:hint="Summary"
         android:gravity="top"
+        android:hint="Blood Sugar"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/EditLogInsulin"
+        android:layout_width="389dp"
+        android:layout_height="76dp"
+        android:layout_below="@id/EditLogBloodSugar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:gravity="top"
+        android:hint="Insulin"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <EditText
+        android:id="@+id/EditLogCarbs"
+        android:layout_width="389dp"
+        android:layout_height="76dp"
+        android:layout_below="@id/EditLogInsulin"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:gravity="top"
+        android:hint="Carbs"
         android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
     <Button
-        android:id="@+id/EditNewsAddNewsBtn"
+        android:id="@+id/EditLogAddLogBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/EditNewsSummary"
+        android:layout_below="@+id/EditLogCarbs"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="35dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="35dp"
         android:backgroundTint="@color/white"
-        android:text="Add News"
+        android:text="Add Log"
         android:textColor="@color/black" />
 
 </RelativeLayout>

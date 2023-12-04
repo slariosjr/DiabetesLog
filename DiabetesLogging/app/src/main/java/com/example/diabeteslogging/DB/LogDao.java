@@ -11,6 +11,7 @@ import androidx.room.Update;
 
 
 import com.example.diabeteslogging.LogD;
+import com.example.diabeteslogging.News;
 
 import java.util.List;
 
@@ -35,4 +36,9 @@ public interface LogDao {
    LogD getInsulinByID( String Insulin);
    @Query(" SELECT * FROM " + Database.LOG_TABLE + " WHERE LogDate = :LogDate ")
    LogD getLogDateByID( String LogDate);
+
+
+
+   @Query(" SELECT * FROM " + Database.LOG_TABLE + " ORDER BY LogDate desc")
+   List<LogD> getLogDataTopic();
 }

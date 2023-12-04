@@ -62,12 +62,19 @@ public class RemoveUser extends AppCompatActivity {
                 selectUser = userDao.getUsernameByID(users);
             }
         });
+
+
+
         ManageRemoveUserBtn = findViewById(R.id.ManageRemoveUserBtn);
         ManageRemoveUserBtn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 userDao.delete(selectUser);
+
                 Toast.makeText(RemoveUser.this, "User Removed", Toast.LENGTH_SHORT).show();
+
+
             }
         });
 

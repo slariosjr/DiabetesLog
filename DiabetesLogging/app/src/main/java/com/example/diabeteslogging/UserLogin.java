@@ -62,7 +62,7 @@ public class UserLogin extends AppCompatActivity {
         UserLogBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Log.class);
+                Intent intent = new Intent(getApplicationContext(), LogDetails.class);
                 startActivity(intent);
             }
         });

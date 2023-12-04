@@ -58,12 +58,8 @@ public class DiabetesNewsDetails extends AppCompatActivity {
 
 
 
-
-
     }
-
-
-
+    
     private void getDatabase() {
         newsDao = Room.databaseBuilder(this, Database.class, Database.DATABASE_NAME)
                 .allowMainThreadQueries()

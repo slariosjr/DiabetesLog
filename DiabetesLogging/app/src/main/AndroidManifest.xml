@@ -15,6 +15,15 @@
         android:theme="@style/Theme.DiabetesLogging"
         tools:targetApi="31">
         <activity
+            android:name=".NewLogDetails"
+            android:exported="false" />
+        <activity
+            android:name=".AddingLogDetails"
+            android:exported="false" />
+        <activity
+            android:name=".LogDetails"
+            android:exported="false" />
+        <activity
             android:name=".NewsDetails"
             android:exported="false" />
         <activity

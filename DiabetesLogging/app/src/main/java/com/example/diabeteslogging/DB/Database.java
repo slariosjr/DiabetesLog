@@ -14,7 +14,7 @@ import com.example.diabeteslogging.News;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@androidx.room.Database(entities = {User.class, LogD.class, AppointmentD.class, News.class}, version = 4)
+@androidx.room.Database(entities = {User.class, LogD.class, AppointmentD.class, News.class}, version = 6)
 public abstract class Database  extends RoomDatabase {
     public static final String DATABASE_NAME = "DiabetesLog.db";
     public static final String USER_TABLE = "User_Table";
